@@ -18,15 +18,6 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
-    },
-    {
-    	"path": "/xsodata/",
-    	"target": {
-    		"type": "destination",
-    		"name": "user_js_be",
-    		"entryPath": "/xsodata/"
-    	},
-    	"description": "HANA XS DB"
     }
   ],
   "sendWelcomeFileRedirect": true

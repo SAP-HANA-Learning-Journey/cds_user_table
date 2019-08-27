@@ -13,9 +13,7 @@ modules:
     provides:
       - name: user_js_api
         properties:
-          url: '~{url}'
-          name: user_js_be
-          forwardAuthToken: true
+          url: '${default-url}'
     requires:
       - name: user_db
       - name: hdi_user_db
@@ -32,6 +30,9 @@ modules:
       - name: dest_cds_user_table
       - name: user_js_api
         group: destinations
+        properties:
+          name: user_js_be
+          url: '~{url}'
 resources:
   - name: hdi_user_db
     properties:

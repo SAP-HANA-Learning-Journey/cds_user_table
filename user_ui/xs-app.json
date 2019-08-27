@@ -6,9 +6,8 @@
   },
   "routes": [
   	{
-  		"source": "(*.)(xsodata)",
-  		"destination": "user_js_be",
-  		"authenticationType": "xsuaa"
+  		"source": "^/xsodata/user.xsodata/.*$",
+  		"destination": "user_js_be"
   	},
     {
       "source": "^/user_ui/(.*)$",
