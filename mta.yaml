@@ -13,7 +13,7 @@ modules:
     provides:
       - name: user_js_api
         properties:
-          url: '${default-url}'
+          url: ${default-url}
     requires:
       - name: user_db
       - name: hdi_user_db
@@ -32,11 +32,11 @@ modules:
         group: destinations
         properties:
           name: user_js_be
-          url: '~{url}'
+          url: ~{url}
 resources:
   - name: hdi_user_db
     properties:
-      hdi-container-name: '${service-name}'
+      hdi-container-name: ${service-name}
     type: com.sap.xs.hdi-container
   - name: uaa_cds_user_table
     parameters:
