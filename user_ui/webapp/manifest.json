@@ -21,6 +21,10 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
+			},
+			"local_data": {
+				"uri": "model/local.json",
+				"type": "JSON"
 			}
 		}
 	},
@@ -68,6 +72,10 @@
 				"settings": {
 					"bundleName": "user_ui.user_ui.i18n.i18n"
 				}
+			},
+			"local": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "local_data"
 			},
 			"": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
