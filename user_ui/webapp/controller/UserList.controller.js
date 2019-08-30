@@ -20,8 +20,9 @@ sap.ui.define([
 					oLocal.setProperty("/User", {});
 				},
 				error: function (oError) {
-					var response = JSON.parse(oError.responseText);
-					var errorMessage = response.error.message.value;
+					var errorMessage = oError.responseText !== ""
+						? JSON.parse(oError.responseText).response.error.message.value
+						: oBundle.getProperty("msgUnknown");
 					MessageBox.alert(oBundle.getProperty("msgCreateError") + errorMessage);
 				}
 			});
@@ -55,8 +56,9 @@ sap.ui.define([
 						oLocal.setProperty("/SelectedUserPath", "");
 					},
 					error: function (oError) {
-						var response = JSON.parse(oError.responseText);
-						var errorMessage = response.error.message.value;
+						var errorMessage = oError.responseText !== ""
+							? JSON.parse(oError.responseText).response.error.message.value
+							: oBundle.getProperty("msgUnknown");
 						MessageBox.alert(oBundle.getProperty("msgDeleteError") + errorMessage);
 					}
 				});
@@ -64,5 +66,5 @@ sap.ui.define([
 		}
 
 	});
-	
+
 });
