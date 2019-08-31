@@ -1,6 +1,6 @@
 ID: cds_user_table
 _schema-version: '2.1'
-version: 0.0.2
+version: 0.0.3
 modules:
   - name: user_db
     type: hdb
@@ -40,6 +40,9 @@ resources:
     type: com.sap.xs.hdi-container
     properties:
       container-name: '${service-name}'
+    parameters:
+      service: hanatrial
+      service-plan: hdi-shared
   - name: uaa_cds_user_table
     parameters:
       path: ./xs-security.json
