@@ -1,6 +1,6 @@
 ID: cds_user_table
 _schema-version: '2.1'
-version: 0.0.3
+version: 0.0.5
 modules:
   - name: user_db
     type: hdb
@@ -23,8 +23,8 @@ modules:
     type: html5
     path: user_ui
     parameters:
-      disk-quota: 256M
-      memory: 256M
+      disk-quota: 1024M
+      memory: 1024M
     build-parameters:
       builder: grunt
     requires:
